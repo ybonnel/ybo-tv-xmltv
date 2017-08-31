@@ -11,7 +11,7 @@ if [ -f ./xmltv.xml ]
 then
 	echo "`date +"%Y%m%d %T.%N"` : Lancement de la mise a jour mongo"
 
-	java -jar ybo-tv-helper-jar-with-dependencies.jar xmltv.xml
+	java -Djavax.xml.accessExternalDTD=all -jar ybo-tv-helper-jar-with-dependencies.jar xmltv.xml
 
 	echo "`date +"%Y%m%d %T.%N"` : Fin de la mise a jour mongo"
 fi
